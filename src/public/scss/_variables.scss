@@ -1,0 +1,28 @@
+$brand-primary:         #6a148e;
+
+$app-min-width:         320px;
+
+$breakpoint-sm:         0px;
+$breakpoint-md:         768px;
+$breakpoint-lg:         1024px;
+
+$spacing-sm:            16px;
+$spacing-md:            24px;
+$spacing-lg:            32px;
+$spacing-xl:            48px;
+$spacing-xll:           64px;
+
+$zp-breakpoints: (
+  sm: (
+    width: $breakpoint-sm,
+    gutter: $spacing-sm
+  ),
+  md: (
+    width: $breakpoint-md,
+    gutter: $spacing-md
+  ),
+  lg: (
+    width: $breakpoint-lg,
+    gutter: $spacing-lg
+  )
+);

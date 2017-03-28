@@ -1,0 +1,23 @@
+<section class="zp-results">
+  <h1 class="sr-only">Search Results</h1>
+  <p class="zp-results__count">{{searchResults.result_count}} results found</p>
+
+  {{#each searchResults.listing as | result index | }}
+    <div class="zp-results__listing grid">
+      <div class="col col-md-1-2 col-lg-2-5">
+        <img class="zp-results__media-img" src="{{result.image_url}}" alt="{{{propertyTitleHelper result}}}" />
+      </div>
+      <div class="zp-results__meta col col-md-1-2 col-lg-2-5">
+        <h2>{{{propertyTitleHelper result}}}</h2>
+        <span class="zp-results__price">{{{priceHelper result.price}}}</span>
+        <p>{{result.description}}</p>
+      </div>
+      <div class="zp-results__agents-info col col-md-full-width col-lg-1-5">
+        <img class="zp-results__agents-logo" src="{{result.agent_logo}}" alt="{{result.agent_name}}" />
+        <h3 class="zp-results__agents-name">{{result.agent_name}}</h3>
+        <address class="zp-results__agents-address">{{{agentAddressHelper result}}}</address>
+        <a class="zp-results__agents-phone" href="tel:{{result.agent_phone}}">{{result.agent_phone}}</a>
+      </div>
+    </div>
+  {{/each}}
+</section>
